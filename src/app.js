@@ -286,7 +286,7 @@ export default function App($app) {
     initialSetting.addEventListener("submit", (e) => {
         e.preventDefault();
         // 목표가 더 낮은 경우는 다시 설정해야 함
-        if (initialSetting.goal.value <= initialSetting.begin.value) {
+        if (parseInt(initialSetting.goal.value) <= parseInt(initialSetting.begin.value)) {
             alert("목표 단계가 시작 단계보다 더 높아야 합니다!");
             return;
         }
