@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.App {
+    font-family: 'CookieRun-Regular';
+    box-sizing: border-box;
+    /* width: 350px;
+    height: 650px; */
+    border-radius: 5px;
+    background-color: rgb(185, 253, 248);
+}
+
+.title {
+    font-size: 2rem;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.madeby {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    text-align: end;
+}
+
+.inputs {
+    border: 5px solid greenyellow;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+.result {
+    background-color: gainsboro;
+    text-align: center;
+    color: green;
+}
+
+.currentData {
+    margin: 10px 0;
+}
+
+.star {
+    background-color: gray;
+    color: yellow;
+}
+
+.star>p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.infos {
+    background-color: rgb(45, 138, 166);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.chance {
+    background-color: yellow;
+    text-align: center;
+    color: black;
+}
+
+span {
+    margin: 0 5px;
+}
+
+.intermediate {
+    margin: 5px 0;
+    border: 5px solid blue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.explanation {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0;
+}

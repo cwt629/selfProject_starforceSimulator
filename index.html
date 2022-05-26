@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project : 스타포스 시뮬레이터</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="App">
+        <div class="title">스타포스 시뮬레이터</div>
+        <div class="madeby">made by 장원태</div>
+        <!-- 설정 완료 후부터 나오는 화면 -->
+        <!-- <div class="result">강화 성공!</div>
+        <div class="currentData">
+            <div class="level">장비 레벨: 150</div>
+            <div class="total">총 사용 메소: 23,452,100 메소</div>
+            <div class="intermediate">
+                <div class="inter_success">성공 횟수: 0회</div>
+                <div class="inter_failure">실패 횟수: 0회</div>
+                <div class="inter_destroyed">파괴 횟수: 0회</div>
+            </div>
+        </div>
+        <div class="star">
+            <div>
+                <span>★★★★★</span>
+                <span>★★★★★</span>
+                <span>★★☆☆☆</span>
+            </div>
+            <div>
+                <span>☆☆☆☆☆</span>
+                <span>☆☆☆☆☆</span>
+            </div>
+        </div>
+        <div class="infos">
+            <p>12성 > 13성</p>
+            <p>강화비용: 10,000,000 메소</p>
+            <p>성공확률: 30.0%</p>
+            <p>실패(하락)확률: 69.7%</p>
+            <p>파괴확률: 0.3%</p>
+        </div>
+        <form method="get" class="upgrade">
+            <input type="checkbox" id="nocatchOption">스타캐치 해제
+            <input type="checkbox" id="preventOption">파괴방지
+            <input type="submit" value="강화">
+        </form>
+        <button class="explanation">시뮬레이션 도움말</button> -->
+
+        <!-- 시작할 때부터 나오는 화면 -->
+        <form method="get" class="inputs">
+            <p>시뮬레이션 시작 상태 설정</p>
+            <select name="level">
+                <option value="150">150레벨</option>
+                <option value="160">160레벨</option>
+                <option value="200">200레벨</option>
+            </select>
+            <input name="begin" type="range" max="24" min="0" value="0"
+                oninput="document.getElementById('beginValue').innerHTML = `${this.value}성`"><span
+                id="beginValue">0성</span>
+            <p>시뮬레이션 목표 단계 설정</p>
+            <input name="goal" type="range" max="25" min="1" value="1"
+                oninput="document.getElementById('goalValue').innerHTML = `${this.value}성`"><span
+                id="goalValue">1성</span>
+            <input type="submit" value="설정">
+        </form>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>
