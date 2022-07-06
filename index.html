@@ -50,22 +50,26 @@
         <button class="explanation">시뮬레이션 도움말</button> -->
 
         <!-- 시작할 때부터 나오는 화면 -->
-        <form method="get" class="inputs">
-            <p>시뮬레이션 시작 상태 설정</p>
+        <!-- <form method="get" class="inputs">
+            <p>시뮬레이션 초기 설정</p>
             <select name="level">
                 <option value="150">150레벨</option>
                 <option value="160">160레벨</option>
                 <option value="200">200레벨</option>
             </select>
-            <input name="begin" type="range" max="24" min="0" value="0"
+            <!-- <input name="begin" type="range" max="24" min="0" value="0"
                 oninput="document.getElementById('beginValue').innerHTML = `${this.value}성`"><span
                 id="beginValue">0성</span>
             <p>시뮬레이션 목표 단계 설정</p>
             <input name="goal" type="range" max="25" min="1" value="1"
                 oninput="document.getElementById('goalValue').innerHTML = `${this.value}성`"><span
-                id="goalValue">1성</span>
-            <input type="submit" value="설정">
-        </form>
+                id="goalValue">1성</span> -->
+        <!-- <input name="begin" class="input" maxlength="2" placeholder="시작">성 >
+        <input name="goal" class="input" maxlength="2" placeholder="목표">성
+        <br>
+        <input name="basicCost" class="costinput" placeholder="장비 복구 비용">메소
+        <input type="submit" value="설정">
+        </form> -->
     </main>
 
     <script src="./script.js" type="module"></script>

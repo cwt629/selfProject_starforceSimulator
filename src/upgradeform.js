@@ -27,7 +27,9 @@ export default function UpgradeForm({ $app, initialState, onClick, onSubmit }) {
     this.render = function () {
         this.$target.innerHTML = `<input type="checkbox" id="nocatchOption">스타캐치 해제
         <input type="checkbox" id="preventOption">파괴방지
-        <input type="submit" value="강화">`;
+        <input type="submit" value="강화">
+        <br>
+        <input type="checkbox" id="alertOption">5배수 달성마다 알림창 띄우기`;
 
         this.$target.style.display = (this.state.ready) ? 'block' : 'none';
     }
@@ -54,8 +56,8 @@ export default function UpgradeForm({ $app, initialState, onClick, onSubmit }) {
     // 강화 시
     this.$target.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (this.state.currentStar >= 25) {
-            alert("이미 최고 강화 단계인 25성에 도달하셨습니다!");
+        if (this.state.currentStar >= this.state.limit) {
+            alert(`이미 최고 강화 단계인 ${this.state.limit}성에 도달하셨습니다!`);
             return;
         }
         this.onSubmit();

@@ -19,13 +19,13 @@ export default function Infos({ $app, initialState }) {
         const preventPenalty = (!isChance && canPrevent && this.state.prevention) ? 2n : 1n;
         // 강화단계
         if (this.state.ready) {
-            if (this.state.currentStar >= 25) {
-                messages.push("25성 달성에 성공하였습니다!");
+            if (this.state.currentStar >= this.state.limit) {
+                messages.push(`최고 강화 단계인 ${this.state.limit}성을 달성했습니다!`);
             }
             else {
                 messages.push(`${this.state.currentStar}성 > ${this.state.currentStar + 1}성`);
                 // 강화비용
-                messages.push(`강화비용: ${(this.state.costs[this.state.currentStar] * preventPenalty).toLocaleString()} 메소`);
+                messages.push(`강화비용: ${(this.state.cost * preventPenalty).toLocaleString()} 메소`);
                 // 성공확률
                 messages.push(`성공확률: ${(isChance) ? 100 : this.state.successPercent[this.state.currentStar]}%`);
                 // 이하는 찬스타임일 경우는 보이지 않음
