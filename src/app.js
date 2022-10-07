@@ -144,6 +144,18 @@ export default function App($app) {
 
             document.querySelector(".simulSetting").value = "재설정";
             document.getElementById("objective").classList.remove("achieved");
+        },
+        onInput: () => {
+            const restore = document.getElementById("costinput").value;
+            if (restore === "") {
+                document.getElementById("restoreValue").innerText = "장비 복구 비용이 입력되지 않았습니다.";
+            }
+            else if (isNaN(restore)) {
+                document.getElementById("restoreValue").innerText = "올바르지 않은 입력입니다.";
+            }
+            else {
+                document.getElementById("restoreValue").innerText = `입력: ${parseInt(restore).toLocaleString()}메소`;
+            }
         }
     });
 

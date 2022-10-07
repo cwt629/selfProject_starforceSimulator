@@ -41,6 +41,11 @@ body {
     padding-bottom: 15px;
 }
 
+#restoreValue {
+    font-size: 0.9rem;
+    color: gray;
+}
+
 .result {
     background-color: gainsboro;
     text-align: center;

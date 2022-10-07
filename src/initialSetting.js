@@ -1,8 +1,9 @@
-export default function InitialSetting({ $app, onSubmit }) {
+export default function InitialSetting({ $app, onSubmit, onInput }) {
     this.$target = document.createElement("form");
     this.$target.className = "inputs";
     $app.appendChild(this.$target);
     this.onSubmit = onSubmit;
+    this.onInput = onInput;
 
     this.render = function () {
         this.$target.innerHTML = `
@@ -14,6 +15,7 @@ export default function InitialSetting({ $app, onSubmit }) {
         <p>장비 복구 비용(선택)</p>
         <input name="basicCost" id="costinput" placeholder="파괴 시 추가될 비용">메소
         <input type="submit" class="simulSetting" value="설정">
+        <p id="restoreValue">장비 복구 비용이 입력되지 않았습니다.</p>
         `
     }
 
@@ -21,6 +23,11 @@ export default function InitialSetting({ $app, onSubmit }) {
     this.$target.addEventListener("submit", (e) => {
         e.preventDefault();
         this.onSubmit();
+    })
+
+    // 장비 복구 비용 입력 시
+    this.$target.addEventListener("input", () => {
+        this.onInput();
     })
 
     // 시작할 때 렌더링 먼저 함
