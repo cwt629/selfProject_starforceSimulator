@@ -14,8 +14,8 @@ export default function InitialSetting({ $app, onSubmit, onInput }) {
         <input name="goal" id="goalinput" maxlength="2" placeholder="목표">성
         <p>장비 복구 비용(선택)</p>
         <input name="basicCost" id="costinput" placeholder="파괴 시 추가될 비용">메소
-        <input type="submit" class="simulSetting" value="설정">
         <p id="restoreValue">장비 복구 비용이 입력되지 않았습니다.</p>
+        <div class="setButton"><input type="submit" class="simulSetting" value="시작하기"></div>
         `
     }
 

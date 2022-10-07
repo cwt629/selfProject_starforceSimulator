@@ -46,6 +46,11 @@ body {
     color: gray;
 }
 
+.setButton {
+    display: flex;
+    justify-content: center;
+}
+
 .result {
     background-color: gainsboro;
     text-align: center;

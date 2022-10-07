@@ -142,7 +142,7 @@ export default function App($app) {
                 achieved: false
             });
 
-            document.querySelector(".simulSetting").value = "재설정";
+            document.querySelector(".simulSetting").value = "재시작하기";
             document.getElementById("objective").classList.remove("achieved");
         },
         onInput: () => {
